@@ -41,15 +41,7 @@ public class SalaService {
         return toResponse(sala);
     }
 
-    //Atualizar sala
-
-    public SalaResponse atualizarSala(UUID id, SalaRequest salaRequest){
-        Sala sala = salaRepository.findById(id)
-                .orElseThrow(() -> new EntityNotFoundException("Nenhuma sala encontrada"));
-        sala.setNome(salaRequest.nome());
-        //PAREIAQUI
-        sala.setAssentos();
-    }
+    
 
     private List<Assento> gerarAssentos(Sala sala, int fileiras, int assentosPorFileira) {
         List<Assento> assentos = new ArrayList<>();

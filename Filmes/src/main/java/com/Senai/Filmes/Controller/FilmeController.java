@@ -6,6 +6,7 @@ import com.Senai.Filmes.DTO.Response.FilmeResponse;
 import com.Senai.Filmes.FilmesApplication;
 import com.Senai.Filmes.Service.FilmeService;
 import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -15,6 +16,7 @@ import java.util.UUID;
 
 import java.util.List;
 
+@Tag(name = "Filmes", description = "Endpoint para gerenciamento dos filmes do cinema")
 @RestController
 @CrossOrigin("*") // É o acesso do externo, do pessoal de outras redes que vai acessar essa API. No momento você tá permitindo todo mundo acessar
 @RequestMapping("/api/filmes") //Porque isso vai ser uma rota que os dados vão acessar a partir desse controller

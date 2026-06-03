@@ -7,11 +7,13 @@ import com.Senai.Filmes.Model.Sala;
 import com.Senai.Filmes.Repository.ISalaRepository;
 import jakarta.persistence.EntityNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
+@Service
 public class SalaService {
 
 
@@ -41,7 +43,7 @@ public class SalaService {
         return toResponse(sala);
     }
 
-    
+
 
     private List<Assento> gerarAssentos(Sala sala, int fileiras, int assentosPorFileira) {
         List<Assento> assentos = new ArrayList<>();
@@ -56,6 +58,15 @@ public class SalaService {
             }
         }
         return assentos;
+    }
+
+
+    //Deletar
+    public void deletar(UUID id){
+        Sala sala = salaRepository.findById(id)
+                .orElseThrow(() -> new EntityNotFoundException("Nenhuma sala encontrada!"));
+
+        salaRepository.delete(sala);
     }
 
     private SalaResponse toResponse(Sala sala) {

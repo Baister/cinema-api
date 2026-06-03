@@ -6,6 +6,7 @@ import com.Senai.Filmes.DTO.Response.SalaResponse;
 import com.Senai.Filmes.Model.Sala;
 import com.Senai.Filmes.Service.SalaService;
 import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import org.apache.coyote.Response;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -15,9 +16,10 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import java.util.UUID;
 
+@Tag(name = "Salas", description= "Endpoint para gerenciamento de salas do cinema")
 @RestController
 @CrossOrigin("*")
-@RequestMapping("api/salas")
+@RequestMapping("/api/salas")
 public class SalaController {
 
     @Autowired
@@ -27,11 +29,12 @@ public class SalaController {
     @GetMapping("/{id}")
     @Operation(summary = "Buscar sala por ID", description = "Retorna os detalehs de uma única sala")
     public ResponseEntity<SalaResponse> buscarPorId(@PathVariable UUID id){
-        return new ResponseEntity<>(salaService.buscarPorSalaId(id), HttpStatus.OK);
+        return new ResponseEntity<>(salaService.listarSalaPorId(id), HttpStatus.OK);
     }
 
     @PostMapping
-    @Operation(summary = "Criar sala", description = "Retorna a criação de uma sala no sistema")
+    // @PreAuthorize("hasRole('ADMIN')")
+    @Operation(summary = "Criar sala", description = "Retorna a criação de uma sala no sistema COM GERAÇÃO DE ASSENTOS AUTOMÁTICOS")
     public ResponseEntity<SalaResponse> criarSala(@RequestBody SalaRequest salaRequest){
         return new ResponseEntity<>(salaService.cadastrarSala(salaRequest), HttpStatus.CREATED);
     }

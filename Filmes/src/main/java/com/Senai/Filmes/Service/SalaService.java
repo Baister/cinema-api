@@ -36,7 +36,7 @@ public class SalaService {
     }
 
     //get byId Buscar por id
-    public SalaResponse buscarPorSalaId(UUID id){
+    public SalaResponse listarSalaPorId(UUID id){
         Sala sala = salaRepository.findById(id)
                 .orElseThrow(() -> new EntityNotFoundException("Sala não encontrada!"));
 

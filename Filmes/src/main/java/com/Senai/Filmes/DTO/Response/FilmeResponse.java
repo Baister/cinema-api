@@ -7,7 +7,7 @@ public record FilmeResponse(
         String titulo,
         String descricao,
         String urlPoster,
-        String genero,
+        com.Senai.Filmes.Model.Enums.@jakarta.validation.constraints.NotNull(message = "O campo genero é obrigatório!") GeneroFilme genero,
         Integer duracaoMinutos
 ) {
 }

@@ -2,6 +2,7 @@ package com.Senai.Filmes.Service;
 
 import com.Senai.Filmes.Repository.IUsuarioRepository;
 import com.Senai.Filmes.Security.JwtUtil;
+import com.Senai.Filmes.Security.UserDetailsServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.core.userdetails.UserDetailsService;

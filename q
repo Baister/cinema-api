@@ -1,0 +1,167 @@
+[33mcommit 8b5a9984bb12ee1e762566e4535a7ca16f40c6ee[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Baister <gustavobaister@gmail.com>
+Date:   Mon Jun 8 23:07:06 2026 -0300
+
+    feat: criação do SwaggerConfig e documentação com autenticação JWT
+
+[33mcommit 0bace39e7314d5b185f1e3c0d59f45be07e16dd7[m
+Author: Baister <gustavobaister@gmail.com>
+Date:   Mon Jun 8 22:30:04 2026 -0300
+
+    feat: Security/JwtFilter: interceptando requisições com try-catch
+
+[33mcommit f2db6154acc417916959178aea7df8d4608db72f[m
+Author: Baister <gustavobaister@gmail.com>
+Date:   Mon Jun 8 22:03:34 2026 -0300
+
+    feat: criando UserDetailsServiceImpl - Carregando usuário pelo email
+
+[33mcommit 99151d323539f91a9a9ef55b14d3150edcd1602b[m
+Author: Baister <gustavobaister@gmail.com>
+Date:   Mon Jun 8 21:50:27 2026 -0300
+
+    feat: criando Data Initializer
+
+[33mcommit 160e0cfdbd042babf42a6abfab7aa086248e3900[m
+Author: Baister <gustavobaister@gmail.com>
+Date:   Mon Jun 8 21:24:13 2026 -0300
+
+    feat: criação do jwtUtil
+
+[33mcommit 585d27ab5c2cacf9aee1b0424cb6c0f4b8c3f5b7[m
+Author: Gustavo Baister <gustavobaister@gmail.com>
+Date:   Wed Jun 3 21:58:13 2026 -0300
+
+    Adicionando onde paramos no authenticator
+
+[33mcommit 8f9a3f0e6f290cbf1135fccececc74c9a7dd83a8[m
+Author: Gustavo Baister <gustavobaister@gmail.com>
+Date:   Wed Jun 3 21:45:35 2026 -0300
+
+    Criando JWT
+
+[33mcommit 33fc13c43bbe092c99f83de378752446b0701730[m
+Author: Gustavo Baister <gustavobaister@gmail.com>
+Date:   Wed Jun 3 20:39:02 2026 -0300
+
+    Colocando a tag no filme Controller
+
+[33mcommit ed297b6954df5219be306079273b744e9d98598c[m
+Author: Gustavo Baister <gustavobaister@gmail.com>
+Date:   Wed Jun 3 20:36:30 2026 -0300
+
+    Alguns ajustes
+
+[33mcommit c5ba0be41add4af83b593ebab6299a8395f33f83[m
+Author: Gustavo Baister <gustavobaister@gmail.com>
+Date:   Wed Jun 3 20:20:35 2026 -0300
+
+    Ajustando o BuscarPorSalaID para ListarSalaPOrId
+
+[33mcommit 71830640ad74be77455b112d3cf17cc2e6a6ba44[m
+Author: Gustavo Baister <gustavobaister@gmail.com>
+Date:   Wed Jun 3 20:06:34 2026 -0300
+
+    Criado deletar Sala
+
+[33mcommit bbc56ea6fecfca45dd14dc5a9ea33bab67865130[m
+Author: Gustavo Baister <gustavobaister@gmail.com>
+Date:   Wed Jun 3 20:06:33 2026 -0300
+
+    Ajustando Sala Service
+
+[33mcommit e30dc39b170a421ccc92dea070630cba21850b46[m
+Author: Gustavo Baister <gustavobaister@gmail.com>
+Date:   Wed Jun 3 20:06:32 2026 -0300
+
+    No meio do processo da criação da API de sala
+
+[33mcommit f9a47e29c5776ca69eb3354facd618b09f7f3310[m
+Author: Gustavo Baister <gustavobaister@gmail.com>
+Date:   Wed Jun 3 20:06:31 2026 -0300
+
+    Ajustando Filme Service e Criando partes da Sala Repository
+
+[33mcommit 157943d4f45d6b471331df9183d5799d13954fcc[m
+Author: Gustavo Baister <gustavobaister@gmail.com>
+Date:   Wed Jun 3 20:06:30 2026 -0300
+
+    Parando na aula para a aba FilmeController
+
+[33mcommit 4e8ceda163226603720c721cf9e9e04a6301d42f[m
+Author: Gustavo Baister <gustavobaister@gmail.com>
+Date:   Wed Jun 3 20:06:30 2026 -0300
+
+    Ajustando reserva
+
+[33mcommit 091bea6b47948882a864b86ee25b84dab40a0d8a[m
+Author: Gustavo Baister <gustavobaister@gmail.com>
+Date:   Wed Jun 3 20:06:29 2026 -0300
+
+    Feature: criando pastas repository, service, controller
+
+[33mcommit 0921b26e9ff9bd07ee06346aa459d90d4d3eb7c2[m
+Author: Gustavo Baister <gustavobaister@gmail.com>
+Date:   Wed Jun 3 20:06:29 2026 -0300
+
+    Criando Request e Response
+
+[33mcommit 60c650c3bd8e9a50c4549eeac126c8a1caab6c05[m
+Author: Gustavo Baister <gustavobaister@gmail.com>
+Date:   Wed Jun 3 20:06:28 2026 -0300
+
+    Alterando Reservas e lançando Sessao
+
+[33mcommit e5cbe417326fe89439ed8843ff86334bf3f3257a[m
+Author: Gustavo Baister <gustavobaister@gmail.com>
+Date:   Wed Jun 3 20:06:28 2026 -0300
+
+    Terminando de atualizar Assento
+
+[33mcommit 4b34a45440475bd6fb4479b381ed80fab514fdd2[m
+Author: Gustavo Baister <gustavobaister@gmail.com>
+Date:   Wed Jun 3 20:06:28 2026 -0300
+
+    Adicionando ReservaAssento e Status Reserva
+
+[33mcommit 561b7c59d7030404cce6b60c5d8a1d891ecc8e26[m
+Author: Gustavo Baister <gustavobaister@gmail.com>
+Date:   Wed Jun 3 20:06:27 2026 -0300
+
+    Criando a tabela reservas
+
+[33mcommit 4977e06f36af338cc75087aadd1997f3d3c49a66[m
+Author: Gustavo Baister <gustavobaister@gmail.com>
+Date:   Wed Jun 3 20:06:27 2026 -0300
+
+    Criando Usuário e Sala
+
+[33mcommit 59e42fb382275bd3ef2b760fff5458c92f215a09[m
+Author: Gustavo <gustavobaister@gmail.com>
+Date:   Fri May 22 21:23:55 2026 -0300
+
+    Criando model, atribuições e Enum
+
+[33mcommit 465a75ad59304da9c7ecf9ad2c412b864a70cd63[m
+Author: Gustavo <gustavobaister@gmail.com>
+Date:   Thu May 21 22:01:41 2026 -0300
+
+    Comentando o spring security
+
+[33mcommit 2d1a6cf7d91a3c528303829b4d5a73447f741570[m
+Author: Gustavo <gustavobaister@gmail.com>
+Date:   Thu May 21 21:45:38 2026 -0300
+
+    Adicionando a .env na config pra run e configurando o Application.properties
+
+[33mcommit f7f02e3620112051773441d57aa96b67f8b8190a[m
+Author: Gustavo <gustavobaister@gmail.com>
+Date:   Thu May 21 19:18:50 2026 -0300
+
+    Adicionando o que temos até agora do Spring Initializer
+
+[33mcommit e747d6083291cdb819679b972d354bfe04bd3d72[m
+Author: Gustavo Baister <137965075+Baister@users.noreply.github.com>
+Date:   Thu May 21 19:17:20 2026 -0300
+
+    Initial commit

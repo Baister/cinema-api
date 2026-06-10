@@ -10,6 +10,7 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.UUID;
@@ -47,18 +48,21 @@ public class FilmeController {
     }
 
     @PostMapping
+    @PreAuthorize("hasRole('ADMIN')")
     @Operation(summary = "Criar filme", description = "Retorna a criação de um filme.")
     public ResponseEntity<FilmeResponse> criarFilme(@RequestBody FilmeRequest filmeRequest){//É chamar o corpo do objeto
         return new ResponseEntity<>(filmeService.cadastrarFilme(filmeRequest), HttpStatus.CREATED);
     }
 
     @PutMapping("/{id}")
+    @PreAuthorize("hasRole('ADMIN')")
     @Operation(summary = "Atualizar filme",description = "atualiza os dados de um filme")
     public ResponseEntity<FilmeResponse> atualizar(@PathVariable UUID id, @RequestBody FilmeRequest filmeRequest){
         return new ResponseEntity<>(filmeService.atualizarFilme(id, filmeRequest), HttpStatus.OK);
     }
 
     @DeleteMapping("/{id}")
+    @PreAuthorize("hasRole('ADMIN')")
     @Operation(summary = "Deletar filme", description = "deleta os dados de um filme por completo.")
     public ResponseEntity<FilmeResponse> deletar(@PathVariable UUID id){
 

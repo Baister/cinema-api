@@ -1,4 +1,4 @@
-package com.Senai.Filmes.Config;
+package com.Senai.Filmes.Security;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

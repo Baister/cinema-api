@@ -3,8 +3,8 @@ package com.Senai.Filmes.Config;
 import com.Senai.Filmes.Model.Enums.Cargo;
 import com.Senai.Filmes.Model.Usuario;
 import com.Senai.Filmes.Repository.IUsuarioRepository;
-import lombok.Value;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
@@ -15,9 +15,10 @@ public class DataInitializer implements CommandLineRunner {
 
     // Lê do application.properties (com valor padrão para desenvolvimento)
     //@Value("${admin.email:admin@cinema.com}")
+    @org.springframework.beans.factory.annotation.Value("${admin.email:admin@cinema.com}")
     private String adminEmail;
 
-    //@Value(staticConstructor = "${admin.senha:Admin@123}")
+    @org.springframework.beans.factory.annotation.Value("${admin.senha:Admin@134}")
     private String adminSenha;
 
     @Override

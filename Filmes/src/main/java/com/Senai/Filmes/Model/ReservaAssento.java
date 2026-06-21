@@ -2,6 +2,30 @@ package com.Senai.Filmes.Model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
+<<<<<<< HEAD
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.Setter;
+
+import java.util.UUID;
+
+@Getter
+@Setter
+@EqualsAndHashCode(onlyExplicitlyIncluded = true)
+@Entity
+@Table(name = "reservas_assentos")
+public class ReservaAssento {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.UUID)
+    @EqualsAndHashCode.Include
+    private UUID id;
+
+    @ManyToOne
+    @JoinColumn(name = "reserva_id")
+    @JsonIgnore
+    private Reserva reserva;
+=======
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -21,6 +45,7 @@ public class ReservaAssento {
     @ManyToOne
     @JoinColumn(name = "reserva_id")
     private Reservas reserva;
+>>>>>>> a7ee41ec06d376b84f6760720508b2462f28a491
 
     @ManyToOne
     @JoinColumn(name = "assento_id")

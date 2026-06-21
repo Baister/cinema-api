@@ -5,5 +5,9 @@ public record SalaRequest(
         Integer totalAssentos,
         Integer fileiras,
         Integer assentosPorFileira
+<<<<<<< HEAD
+) {}
+=======
 ) {
 }
+>>>>>>> a7ee41ec06d376b84f6760720508b2462f28a491

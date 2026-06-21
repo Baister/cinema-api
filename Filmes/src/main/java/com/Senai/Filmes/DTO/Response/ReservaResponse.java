@@ -12,5 +12,9 @@ public record ReservaResponse(
         List<AssentoResponse> assentos,
         StatusReserva status,
         LocalDateTime criadoEm
+<<<<<<< HEAD
+) {}
+=======
 ) {
 }
+>>>>>>> a7ee41ec06d376b84f6760720508b2462f28a491

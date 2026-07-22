@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-<<<<<<< HEAD
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
-=======
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
->>>>>>> a7ee41ec06d376b84f6760720508b2462f28a491
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -31,11 +27,7 @@
 		<url/>
 	</scm>
 	<properties>
-<<<<<<< HEAD
 		<java.version>21</java.version>
-=======
-		<java.version>25</java.version>
->>>>>>> a7ee41ec06d376b84f6760720508b2462f28a491
 	</properties>
 	<dependencies>
 		<dependency>
@@ -60,7 +52,6 @@
 			<version>3.0.2</version>
 		</dependency>
 
-<<<<<<< HEAD
 		<!-- AWS S3 -->
 		<dependency>
 			<groupId>software.amazon.awssdk</groupId>
@@ -69,13 +60,6 @@
 		</dependency>
 
 		<!-- JWT -->
-=======
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-security</artifactId>
-		</dependency>
-
->>>>>>> a7ee41ec06d376b84f6760720508b2462f28a491
 		<dependency>
 			<groupId>io.jsonwebtoken</groupId>
 			<artifactId>jjwt-api</artifactId>
@@ -93,10 +77,7 @@
 			<version>0.12.5</version>
 			<scope>runtime</scope>
 		</dependency>
-<<<<<<< HEAD
 
-=======
->>>>>>> a7ee41ec06d376b84f6760720508b2462f28a491
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>

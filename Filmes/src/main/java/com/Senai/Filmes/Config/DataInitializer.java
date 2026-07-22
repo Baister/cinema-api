@@ -11,7 +11,6 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class DataInitializer implements CommandLineRunner {
-<<<<<<< HEAD
 
     @Autowired
     private IUsuarioRepository usuarioRepository;
@@ -23,31 +22,14 @@ public class DataInitializer implements CommandLineRunner {
     private String adminEmail;
 
     @Value("${admin.senha:Admin@123}")
-=======
-    @Autowired
-    private IUsuarioRepository usuarioRepository;
-    @Autowired private PasswordEncoder passwordEncoder;
-
-    // Lê do application.properties (com valor padrão para desenvolvimento)
-    //@Value("${admin.email:admin@cinema.com}")
-    @org.springframework.beans.factory.annotation.Value("${admin.email:admin@cinema.com}")
-    private String adminEmail;
-
-    @org.springframework.beans.factory.annotation.Value("${admin.senha:Admin@134}")
->>>>>>> a7ee41ec06d376b84f6760720508b2462f28a491
     private String adminSenha;
 
     @Override
     public void run(String... args) {
-<<<<<<< HEAD
-=======
-        // Se o admin já existe, não faz nada (evita duplicação a cada restart)
->>>>>>> a7ee41ec06d376b84f6760720508b2462f28a491
         if (usuarioRepository.existsByEmail(adminEmail)) {
             return;
         }
 
-<<<<<<< HEAD
         Usuario admin = new Usuario();
         admin.setNome("Administrador");
         admin.setEmail(adminEmail);
@@ -56,16 +38,6 @@ public class DataInitializer implements CommandLineRunner {
 
         usuarioRepository.save(admin);
 
-=======
-        // Cria o admin inicial com senha hasheada
-        Usuario admin = new Usuario();
-        admin.setNome("Administrador");
-        admin.setEmail(adminEmail);
-        admin.setSenha(passwordEncoder.encode(adminSenha)); // NUNCA salvar senha pura!
-        admin.setCargo(Cargo.ADMIN);
-
-        usuarioRepository.save(admin);
->>>>>>> a7ee41ec06d376b84f6760720508b2462f28a491
         System.out.println(">>> Admin criado: " + adminEmail);
     }
 }

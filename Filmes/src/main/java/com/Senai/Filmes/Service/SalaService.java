@@ -9,17 +9,12 @@ import jakarta.persistence.EntityNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-<<<<<<< HEAD
-=======
-import java.util.ArrayList;
->>>>>>> a7ee41ec06d376b84f6760720508b2462f28a491
 import java.util.List;
 import java.util.UUID;
 
 @Service
 public class SalaService {
 
-<<<<<<< HEAD
     @Autowired
     private ISalaRepository salaRepository;
 
@@ -39,24 +34,10 @@ public class SalaService {
         sala.setTotalAssentos(request.totalAssentos());
 
         gerarAssentos(sala, request.fileiras(), request.assentosPorFileira());
-=======
-
-    @Autowired
-    private ISalaRepository salaRepository;
-
-    public SalaResponse cadastrarSala(SalaRequest request) {
-        Sala sala = new Sala();
-        sala.setNome(request.nome());
-        sala.setTotalAssentos(request.fileiras() * request.assentosPorFileira());
-
-        List<Assento> assentos = gerarAssentos(sala, request.fileiras(), request.assentosPorFileira());
-        sala.setAssentos(assentos);
->>>>>>> a7ee41ec06d376b84f6760720508b2462f28a491
 
         return toResponse(salaRepository.save(sala));
     }
 
-<<<<<<< HEAD
     public void deletar(UUID id) {
         Sala sala = salaRepository.findById(id)
                 .orElseThrow(() -> new EntityNotFoundException("Sala não encontrada"));
@@ -79,49 +60,5 @@ public class SalaService {
 
     private SalaResponse toResponse(Sala sala) {
         return new SalaResponse(sala.getId(), sala.getNome(), sala.getTotalAssentos());
-=======
-    public List<SalaResponse> listarTodos(){
-        return salaRepository.findAll().stream().map(this::toResponse).toList();
-    }
-
-    //get byId Buscar por id
-    public SalaResponse listarSalaPorId(UUID id){
-        Sala sala = salaRepository.findById(id)
-                .orElseThrow(() -> new EntityNotFoundException("Sala não encontrada!"));
-
-        return toResponse(sala);
-    }
-
-    private List<Assento> gerarAssentos(Sala sala, int fileiras, int assentosPorFileira) {
-        List<Assento> assentos = new ArrayList<>();
-        for (int f = 0; f < fileiras; f++) {
-            String fileira = String.valueOf((char) ('A' + f));
-            for (int n = 1; n <= assentosPorFileira; n++) {
-                Assento assento = new Assento();
-                assento.setSala(sala);
-                assento.setFileira(fileira);
-                assento.setNumero(n);
-                assentos.add(assento);
-            }
-        }
-        return assentos;
-    }
-
-
-    //Deletar
-    public void deletar(UUID id){
-        Sala sala = salaRepository.findById(id)
-                .orElseThrow(() -> new EntityNotFoundException("Nenhuma sala encontrada!"));
-
-        salaRepository.delete(sala);
-    }
-
-    private SalaResponse toResponse(Sala sala) {
-        return new SalaResponse(
-                sala.getId(),
-                sala.getNome(),
-                sala.getTotalAssentos()
-        );
->>>>>>> a7ee41ec06d376b84f6760720508b2462f28a491
     }
 }

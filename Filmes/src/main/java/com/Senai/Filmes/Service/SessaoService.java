@@ -1,6 +1,5 @@
 package com.Senai.Filmes.Service;
 
-<<<<<<< HEAD
 import com.Senai.Filmes.DTO.Request.SessaoRequest;
 import com.Senai.Filmes.DTO.Response.AssentoResponse;
 import com.Senai.Filmes.DTO.Response.FilmeResponse;
@@ -115,7 +114,4 @@ public class SessaoService {
                 sessao.getId(), filmeResponse, salaResponse, sessao.getInicio(), sessao.getFim(), sessao.getPreco()
         );
     }
-=======
-public class SessaoService {
->>>>>>> a7ee41ec06d376b84f6760720508b2462f28a491
 }

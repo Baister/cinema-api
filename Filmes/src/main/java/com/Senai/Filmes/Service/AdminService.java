@@ -1,6 +1,5 @@
 package com.Senai.Filmes.Service;
 
-<<<<<<< HEAD
 import com.Senai.Filmes.DTO.Response.RelatorioResponse;
 import com.Senai.Filmes.DTO.Response.ReservaResponse;
 import com.Senai.Filmes.Model.Enums.Cargo;
@@ -67,7 +66,4 @@ public class AdminService {
         usuario.setCargo(Cargo.ADMIN);
         usuarioRepository.save(usuario);
     }
-=======
-public class AdminService {
->>>>>>> a7ee41ec06d376b84f6760720508b2462f28a491
 }

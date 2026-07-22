@@ -1,21 +1,10 @@
 package com.Senai.Filmes.Controller;
 
-<<<<<<< HEAD
 import com.Senai.Filmes.DTO.Request.SalaRequest;
 import com.Senai.Filmes.DTO.Response.SalaResponse;
 import com.Senai.Filmes.Service.SalaService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
-=======
-
-import com.Senai.Filmes.DTO.Request.SalaRequest;
-import com.Senai.Filmes.DTO.Response.SalaResponse;
-import com.Senai.Filmes.Model.Sala;
-import com.Senai.Filmes.Service.SalaService;
-import io.swagger.v3.oas.annotations.Operation;
-import io.swagger.v3.oas.annotations.tags.Tag;
-import org.apache.coyote.Response;
->>>>>>> a7ee41ec06d376b84f6760720508b2462f28a491
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -25,23 +14,15 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import java.util.UUID;
 
-<<<<<<< HEAD
 @Tag(name = "Salas", description = "Endpoints para gerenciamento de salas de cinema")
 @RequestMapping("/api/salas")
 @RestController
 @CrossOrigin("*")
-=======
-@Tag(name = "Salas", description= "Endpoint para gerenciamento de salas do cinema")
-@RestController
-@CrossOrigin("*")
-@RequestMapping("/api/salas")
->>>>>>> a7ee41ec06d376b84f6760720508b2462f28a491
 public class SalaController {
 
     @Autowired
     private SalaService salaService;
 
-<<<<<<< HEAD
     @GetMapping
     @Operation(summary = "Listar salas", description = "Lista todas as salas cadastradas")
     public ResponseEntity<List<SalaResponse>> listarTodas() {
@@ -74,44 +55,4 @@ public class SalaController {
         salaService.deletar(id);
         return new ResponseEntity<>(HttpStatus.OK);
     }
-=======
-    //Buscar Sala
-    @GetMapping("/{id}")
-    @Operation(summary = "Buscar sala por ID", description = "Retorna os detalehs de uma única sala")
-    public ResponseEntity<SalaResponse> buscarPorId(@PathVariable UUID id){
-        return new ResponseEntity<>(salaService.listarSalaPorId(id), HttpStatus.OK);
-    }
-
-    @PostMapping
-    // @PreAuthorize("hasRole('ADMIN')")
-    @PreAuthorize("hasRole('ADMIN')")
-    @Operation(summary = "Criar sala", description = "Retorna a criação de uma sala no sistema COM GERAÇÃO DE ASSENTOS AUTOMÁTICOS")
-    public ResponseEntity<SalaResponse> criarSala(@RequestBody SalaRequest salaRequest){
-        return new ResponseEntity<>(salaService.cadastrarSala(salaRequest), HttpStatus.CREATED);
-    }
-
-    //Listar Sala
-    @GetMapping
-    @Operation(summary = "Listar salas", description = "Ele lista todas as salas")
-    public ResponseEntity<List<SalaResponse>> listarTodos(){
-        List<SalaResponse> salas = salaService.listarTodos();
-        if(salas.isEmpty()){
-            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
-        }
-        return new ResponseEntity<>(salas, HttpStatus.OK);
-    }
-
-    //Deletar Sala
-
-    @DeleteMapping("/{id}")
-    @PreAuthorize("hasRole('ADMIN')")
-    @Operation(summary = "Deletar sala", description = "deleta os dados de uma sala por completo -> Somente ADMIN")
-    public ResponseEntity<SalaResponse> deletar(@PathVariable UUID id){
-        salaService.deletar(id);
-        return new ResponseEntity<>(HttpStatus.OK);
-    }
-
-
-
->>>>>>> a7ee41ec06d376b84f6760720508b2462f28a491
 }

@@ -1,6 +1,5 @@
 package com.Senai.Filmes.Service;
 
-<<<<<<< HEAD
 import com.Senai.Filmes.DTO.Request.ReservaRequest;
 import com.Senai.Filmes.DTO.Response.AssentoResponse;
 import com.Senai.Filmes.DTO.Response.ReservaResponse;
@@ -139,7 +138,4 @@ public class ReservaService {
                 reserva.getCriadoEm()
         );
     }
-=======
-public class ReservaService {
->>>>>>> a7ee41ec06d376b84f6760720508b2462f28a491
 }

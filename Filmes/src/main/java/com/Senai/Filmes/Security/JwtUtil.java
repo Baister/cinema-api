@@ -13,7 +13,6 @@ import java.util.Date;
 @Component
 public class JwtUtil {
 
-<<<<<<< HEAD
     @Value("${jwt.secret}")
     private String secret;
 
@@ -43,43 +42,10 @@ public class JwtUtil {
     }
 
     public boolean validarToken(String token, UserDetails userDetails) {
-=======
-    @Value("${jwt.secret}") // secret é o nome original do JWT!
-    private String secret; // É o token jwt e esse token normalmente tem um tempo de expiração
-
-    @Value("${jwt.expiration}") // O mesmo vale pra esse.
-    private long expiration;
-
-
-    private SecretKey getChave(){
-        return Keys.hmacShaKeyFor(secret.getBytes(StandardCharsets.UTF_8));
-    }
-
-    // Gera um token JWT com o email do usuário como subject
-
-    public String gerarToken(UserDetails userDetails){
-        return Jwts.builder()
-                .subject(userDetails.getUsername()) // subject = email
-                .issuedAt(new Date()) // data de criação
-                .expiration(new Date(System.currentTimeMillis() + expiration))
-                .signWith(getChave()) // assina com HMAC-SHA256
-                .compact();
-    }
-
-    //Extrai o email do token (sem lançar exceção)
-    public String extrairEmail(String token){
-        return Jwts.parser().verifyWith(getChave()).build()
-                .parseSignedClaims(token).getPayload().getSubject(); // [é praticamente o retorno
-    }
-
-    //Valida se o token pertence ao usuário e ainda não expirou
-    public boolean validarToken(String token, UserDetails userDetails){
->>>>>>> a7ee41ec06d376b84f6760720508b2462f28a491
         String email = extrairEmail(token);
         return email.equals(userDetails.getUsername()) && !isTokenExpirado(token);
     }
 
-<<<<<<< HEAD
     private boolean isTokenExpirado(String token) {
         return Jwts.parser()
                 .verifyWith(getChave())
@@ -88,11 +54,5 @@ public class JwtUtil {
                 .getPayload()
                 .getExpiration()
                 .before(new Date());
-=======
-    private boolean isTokenExpirado(String token){
-        return Jwts.parser().verifyWith(getChave()).build()
-                .parseSignedClaims(token).getPayload()
-                .getExpiration().before(new Date());
->>>>>>> a7ee41ec06d376b84f6760720508b2462f28a491
     }
 }
